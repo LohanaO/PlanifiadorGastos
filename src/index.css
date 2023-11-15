@@ -186,6 +186,7 @@ header h1 {
 .formulario input[type="number"].nuevo-presupuesto {
     font-size: 2.8rem;
     text-align: center;
+    overflow: hidden;
 }
 
 .contenedor-presupuesto svg {
@@ -205,6 +206,8 @@ header h1 {
     .contenido-presupuesto p {
         text-align: left;
     }
+
+
 }
 .contenido-presupuesto p.negativo,
 .contenido-presupuesto p.negativo span {
@@ -342,18 +345,26 @@ main {
     right: 0;
     bottom: 0;
 }
-.modal .cerrar-modal {
+
+
+
+
+
+.modal .cerrar-modal  {
     position: absolute;
-    right: 3rem;
-    top: 3rem;
     width: 3rem;
     height: 3rem;
+    right: 3rem;
+    top: 3rem;
     cursor: pointer;
 }
-.modal .cerrar-modal img {
-    width: 100%;
-}
 
+@media (max-width : 768px) {
+    .modal .cerrar-modal  {
+       margin-right: 2rem;
+    }
+    
+}
 .modal .formulario {
     max-width: 80rem;
     width: 40rem;
