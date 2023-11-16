@@ -54,7 +54,7 @@ const Modal = ({
         guardarGasto({ nombre, cantidad, categoria, id, fecha });
     };
     return (
-        <div className="modal">
+        <div className="modal" onClick={ocultarModal}>
             <div className="cerrar-modal">
                 <img src={cerrarModal} alt="cerrar modal" onClick={ocultarModal} />
             </div>
@@ -62,7 +62,7 @@ const Modal = ({
                 onSubmit={handleSubmit}
                 className={`formulario ${animarModal ? "animar" : "cerrar"}`}
             >
-                <legend>{gastoEditar && mostrarTexto ? 'Editar Gasto' : 'Nuevo Gasto'}</legend>
+                <legend>{gastoEditar && nombre ? 'Editar Gasto' : 'Nuevo Gasto'}</legend>
                 {mensaje && <Mensaje tipo="error">{mensaje}</Mensaje>}
                 <div className="campo">
                     <label htmlFor="nombre">Nombre Gasto</label>
