@@ -54,9 +54,9 @@ const Modal = ({
         guardarGasto({ nombre, cantidad, categoria, id, fecha });
     };
     return (
-        <div className="modal" onClick={ocultarModal}>
+        <div className="modal">
             <div className="cerrar-modal">
-                <img src={cerrarModal} alt="cerrar modal" onClick={ocultarModal} />
+                <img className="img__close" src={cerrarModal} alt="cerrar modal" onClick={ocultarModal} />
             </div>
             <form
                 onSubmit={handleSubmit}
